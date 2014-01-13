@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <title>Chat to SMS</title>
+  <link type="text/css" href="css/datchat.css" rel="stylesheet">
+  <link type="text/css" href="css/bootstrap.css" rel="stylesheet">
+  <link type="text/css" href="css/bootstrap-theme.css" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/datchat.js"></script>  
+</head>
+<body>
+  <!-- start container div -->	
+  <div id=containerDiv class="container-fluid"> 
+    <!-- start title div-->
+    <div id="titleDiv">
+      <h1 id="title">Chat to SMS</h1>
+    </div> <!-- end title div-->
+    <!-- start left user info div -->
+    <div id="userInfo" class="userInfo split">
+      <!-- legend--> 
+      <legend style="color:white;">User Info</legend>   
+      <!-- username-->
+      <label>My Name: </label> <br>  
+      <input type="text" id="from" /> 
+      <button onclick="login();">Login</button>
+      <br> <!-- end username-->
+      <!--phone-->
+      <label style="margin-top:5px;">Phone: </label><br>
+      <input type="text" id="phone" /> 
+      <button onclick="storePhone();">CC as Text</button> <br>
+      <small>Store phone # to CC outgoing messages as SMS</small>
+      <br> <!--end phone-->   
+    </div> <!-- end left user info div-->	
+    <!-- start right user info div-->
+    <div class="userInfo split">
+      <!-- legend--> 
+      <legend style="color:white;">Recipient</legend>    
+      <!-- recipient-->
+      <label>Send To: </label><br>
+      <input type="text" id="rcpt" /> <br>
+      <br> <!-- end recipient-->	
+    </div> <!-- end right user info div-->
+    <!-- start chat section div-->
+    <div id="chatBoxDiv" class="userInfo">
+      <!-- chat box -->
+      <textarea id="box" readonly="readonly" disabled="disabled" rows=18 cols=108 style="margin:5px 0px;">
+      </textarea><br> <!-- end chat box -->   
+      <!-- message-->
+      Message: <input type="text" id="input" style="margin-left:20px;" size="90" onchange="send();"/>      
+    </div> <!-- end chat section div--> 
+  </div> <!-- end container div--> 
+</body>
+</html>
